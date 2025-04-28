@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Takım Üyeleri";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Takım Üyeleri</h2>
+
+    <div class="mb-3">
+        <a asp-action="Create" class="btn btn-success">Yeni Üye Ekle</a>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Adı</th>
+            <th>Görevi</th>
+            <th>Resim</th>
+            <th>Biyografi</th>
+            <th>İşlemler</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var member in Model)
+        {
+            <tr>
+                <td>@member.Name</td>
+                <td>@member.Role</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(member.ImagePath))
+                    {
+                        <img src="@member.ImagePath" alt="@member.Name" style="width: 100px; height: auto;" />
+                    }
+                    else
+                    {
+                        <span>Resim Yok</span>
+                    }
+                </td>
+                <td>@member.Bio</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@member.Id" class="btn btn-primary btn-sm">Düzenle</a>
+                    <a asp-action="Delete" asp-route-id="@member.Id" class="btn btn-danger btn-sm">Sil</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

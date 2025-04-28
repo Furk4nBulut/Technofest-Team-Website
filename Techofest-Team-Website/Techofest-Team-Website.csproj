@@ -20,7 +20,6 @@
     <ItemGroup>
       <Folder Include="Views\Service\" />
       <Folder Include="Views\Sponsor\" />
-      <Folder Include="Views\Team\" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,0 +1,35 @@
+@model Techonefest_Team_Website.Models.TeamMember
+
+@{
+    ViewData["Title"] = "Yeni Takım Üyesi Ekle";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Yeni Takım Üyesi Ekle</h2>
+
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Role" class="form-label"></label>
+            <input asp-for="Role" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ImagePath" class="form-label"></label>
+            <input asp-for="ImagePath" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Bio" class="form-label"></label>
+            <textarea asp-for="Bio" class="form-control"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">Ekle</button>
+        <a asp-action="Index" class="btn btn-secondary">İptal</a>
+    </form>
+</div>

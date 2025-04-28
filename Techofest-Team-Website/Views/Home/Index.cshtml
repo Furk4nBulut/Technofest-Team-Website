@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Ana Sayfa";
+    Layout = "_Layout"; // Layout'u belirtmek
 }
 
 <div class="text-center">
@@ -53,4 +54,13 @@
     <h3>Hakkımızda</h3>
     <p>@Model.Content</p>
     <a href="@Url.Action("Index", "About")" class="btn btn-primary">Daha fazla bilgi</a>
+</div>
+
+<!-- Takım Kısmı -->
+<div class="container mt-5">
+    <h3>Takımımız</h3>
+    <p>Alanında uzman ekibimizle birlikte projelere yön veriyoruz.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-center mt-4">
+        <a href="@Url.Action("Index", "Team")" class="btn btn-primary btn-lg me-sm-3 mb-2 mb-sm-0">Takımımızı Tanıyın</a>
+    </div>
 </div>

@@ -21,6 +21,9 @@ builder.Services.AddIdentity<User, IdentityRole>()
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 // IAboutService ve AboutService ekleniyor.
 builder.Services.AddScoped<IAboutService, AboutService>();
+// ITeamService ve TeamService kaydını ekleyin
+builder.Services.AddScoped<ITeamService, TeamService>();
+
 
 // MVC yapılandırması
 builder.Services.AddControllersWithViews();

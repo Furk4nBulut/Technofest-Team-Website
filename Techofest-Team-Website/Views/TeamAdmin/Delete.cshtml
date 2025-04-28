@@ -1,0 +1,27 @@
+@model Techonefest_Team_Website.Models.TeamMember
+
+@{
+    ViewData["Title"] = "Takım Üyesini Sil";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-danger">Takım Üyesini Sil</h2>
+
+    <h4>Bu takım üyesini silmek istediğinize emin misiniz?</h4>
+
+    <div class="mb-3">
+        <strong>İsim:</strong> @Model.Name
+    </div>
+    <div class="mb-3">
+        <strong>Rol:</strong> @Model.Role
+    </div>
+    <div class="mb-3">
+        <strong>Hakkında:</strong> @Model.Bio
+    </div>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Sil</button>
+        <a asp-action="Index" class="btn btn-secondary">İptal</a>
+    </form>
+</div>

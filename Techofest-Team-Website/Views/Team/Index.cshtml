@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Takımımız";
+    Layout = "_Layout"; // Layout'u belirtmek
+}
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+    <div class="row">
+        @foreach (var member in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Takım Üyesi Resmi">
+                    <div class="card-body">
+                        <h5 class="card-title">@member.Name</h5>
+                        <p class="card-text">@member.Role</p>
+                        <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Ana Sayfa</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
