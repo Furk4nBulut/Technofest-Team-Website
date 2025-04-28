@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Techonefest_Team_Website.Models.About
+
+@{
     ViewData["Title"] = "Ana Sayfa";
 }
 
@@ -44,4 +46,11 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Hakkımızda Kısmı -->
+<div class="container mt-5">
+    <h3>Hakkımızda</h3>
+    <p>@Model.Content</p>
+    <a href="@Url.Action("Index", "About")" class="btn btn-primary">Daha fazla bilgi</a>
 </div>

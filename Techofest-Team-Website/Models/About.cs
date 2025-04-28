@@ -1,11 +1,14 @@
 using System.ComponentModel.DataAnnotations;
 
-public class About
+namespace Techonefest_Team_Website.Models
 {
-    public int Id { get; set; }
+    public class About
+    {
+        public int Id { get; set; }
 
-    [Required]
-    public string Title { get; set; }
+        [Required(ErrorMessage = "Başlık alanı zorunludur.")]
+        public string Title { get; set; }
 
-    public string Content { get; set; }
+        public string Content { get; set; }
+    }
 }

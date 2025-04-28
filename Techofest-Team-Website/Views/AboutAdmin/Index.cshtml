@@ -1,0 +1,16 @@
+@model Techonefest_Team_Website.Models.About
+
+@{
+    ViewData["Title"] = "Hakkımızda";
+}
+
+<h2>Hakkımızda Bilgileri</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h3>@Model.Title</h3>
+        <p>@Model.Content</p>
+
+        <a asp-action="Edit" class="btn btn-primary mt-3">Düzenle</a>
+    </div>
+</div>

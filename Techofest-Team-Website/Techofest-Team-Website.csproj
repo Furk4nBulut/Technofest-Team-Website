@@ -18,16 +18,15 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Views\Admin\About\" />
-      <Folder Include="Views\Admin\Dashboard\" />
-      <Folder Include="Views\Admin\Service\" />
-      <Folder Include="Views\Admin\Sponsor\" />
-      <Folder Include="Views\Admin\Team\" />
+      <Folder Include="Views\Service\" />
+      <Folder Include="Views\Sponsor\" />
+      <Folder Include="Views\Team\" />
     </ItemGroup>
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Views\Admin\Account\Login.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Admin\Account\Register.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Dashboard\Index.cshtml" />
     </ItemGroup>
 
     <ItemGroup>

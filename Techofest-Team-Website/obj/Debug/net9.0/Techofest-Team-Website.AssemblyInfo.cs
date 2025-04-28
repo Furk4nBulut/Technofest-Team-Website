@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Techofest-Team-Website")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11851c69c559783a231613aa2214350838c0a27d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+012796a23f31174ffaa09ffde80cea9a4e3bd0d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Techofest-Team-Website")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Techofest-Team-Website")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

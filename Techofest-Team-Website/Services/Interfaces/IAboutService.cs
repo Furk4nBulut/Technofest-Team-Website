@@ -1,6 +1,10 @@
-namespace Techofest_Team_Website.Services.Interfaces;
+using Techonefest_Team_Website.Models;
 
-public class IAboutService
+namespace Techonefest_Team_Website.Services.Interfaces
 {
-    
+    public interface IAboutService
+    {
+        About GetAboutInfo();
+        void UpdateAbout(About about);
+    }
 }

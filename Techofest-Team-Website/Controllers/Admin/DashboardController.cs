@@ -1,6 +1,12 @@
-namespace Techofest_Team_Website.Controllers.Admin;
+using Microsoft.AspNetCore.Mvc;
 
-public class DashboardController
+namespace Techonefest_Team_Website.Controllers.Admin
 {
-    
+    public class DashboardController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+    }
 }

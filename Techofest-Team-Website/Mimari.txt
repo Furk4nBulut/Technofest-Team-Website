@@ -1,81 +1,83 @@
 Techonefest-Team-Website/
 │
 ├── Controllers/
-│   ├── AccountController.cs        # Kullanıcı girişi ve kaydı için.
-│   ├── HomeController.cs           # Landing page ve genel sayfalar için.
-│   ├── AboutController.cs          # Hakkımızda sayfası için.
-│   ├── TeamController.cs           # Takım üyeleri sayfası için.
-│   ├── SponsorController.cs        # Sponsorlar sayfası için.
-│   ├── ServiceController.cs        # Hizmetler sayfası için.
-│   └── Admin/                      # Admin paneli için özel controller'lar.
-│       ├── DashboardController.cs  # Admin anasayfa.
-│       ├── TeamAdminController.cs  # Takım üyeleri yönetimi.
-│       ├── SponsorAdminController.cs # Sponsorlar yönetimi.
-│       ├── AboutAdminController.cs # Hakkımızda yönetimi.
-│       └── ServiceAdminController.cs # Hizmetler yönetimi.
+│   ├── AccountController.cs
+│   ├── HomeController.cs
+│   ├── AboutController.cs
+│   ├── TeamController.cs
+│   ├── SponsorController.cs
+│   ├── ServiceController.cs
+│   └── Admin/
+│       ├── DashboardController.cs
+│       ├── TeamAdminController.cs
+│       ├── SponsorAdminController.cs
+│       ├── AboutAdminController.cs
+│       └── ServiceAdminController.cs
 │
 ├── Models/
-│   ├── TeamMember.cs               # Takım üyelerinin modeli.
-│   ├── Sponsor.cs                  # Sponsorların modeli.
-│   ├── Service.cs                  # Hizmetlerin modeli.
-│   ├── About.cs                    # Hakkımızda modeli.
-│   ├── User.cs                     # Kullanıcı modeli.
+│   ├── About.cs
+│   ├── Service.cs
+│   ├── Sponsor.cs
+│   ├── TeamMember.cs
+│   ├── User.cs
 │
 ├── Views/
-│   ├── Shared/                     # Ortak layout ve partial view'lar.
-│   │   ├── _Layout.cshtml          # Ana layout dosyası.
-│   │   ├── _Navbar.cshtml          # Navigasyon bar partial view.
-│   │   ├── _Footer.cshtml          # Footer partial view.
+│   ├── Shared/
+│   │   ├── _Layout.cshtml
+│   │   ├── _Navbar.cshtml
+│   │   ├── _Footer.cshtml
 │   │
 │   ├── Home/
-│   │   └── Index.cshtml            # Landing page.
-│   │
+│   │   └── Index.cshtml
 │   ├── About/
-│   │   └── Index.cshtml            # Hakkımızda sayfası.
-│   │
+│   │   └── Index.cshtml
 │   ├── Team/
-│   │   └── Index.cshtml            # Takım üyeleri sayfası.
-│   │
+│   │   └── Index.cshtml
 │   ├── Sponsor/
-│   │   └── Index.cshtml            # Sponsorlar sayfası.
-│   │
+│   │   └── Index.cshtml
 │   ├── Service/
-│   │   └── Index.cshtml            # Hizmetler sayfası.
+│   │   └── Index.cshtml
 │   │
-│   └── Admin/                      # Admin paneli için view'lar.
+│   └── Admin/
 │       ├── Dashboard/
-│       │   └── Index.cshtml        # Admin giriş sayfası.
-│       ├── Team/
-│       │   └── Index.cshtml        # Takım üyelerini listeleme.
-│       ├── Sponsor/
-│       │   └── Index.cshtml        # Sponsorları listeleme.
+│       │   └── Index.cshtml
 │       ├── About/
-│       │   └── Index.cshtml        # Hakkımızda düzenleme.
-│       ├── Service/
-│       │   └── Index.cshtml        # Hizmetleri düzenleme.
-│
-├── Data/
-│   ├── ApplicationDbContext.cs     # Entity Framework veritabanı bağlamı.
+│       │   ├── Index.cshtml
+│       │   └── Edit.cshtml
+│       ├── Sponsor/
+│       │   ├── Index.cshtml
+│       │   ├── Create.cshtml
+│       │   └── Edit.cshtml
+│       ├── Team/
+│       │   ├── Index.cshtml
+│       │   ├── Create.cshtml
+│       │   └── Edit.cshtml
+│       └── Service/
+│           ├── Index.cshtml
+│           ├── Create.cshtml
+│           └── Edit.cshtml
 │
 ├── Services/
-│   ├── Interfaces/                 # Yeni eklenen interface klasörü.
-│   │   ├── ITeamService.cs         # Takım üyeleri servis arayüzü.
-│   │   ├── ISponsorService.cs      # Sponsorlar servis arayüzü.
-│   │   ├── IAboutService.cs        # Hakkımızda servis arayüzü.
-│   │   ├── IServiceService.cs      # Hizmetler servis arayüzü.
-│   │   └── IAuthenticationService.cs # Kimlik doğrulama servis arayüzü.
-│   │
-│   ├── TeamService.cs              # Takım üyeleri iş mantığı (ITeamService implemente eder).
-│   ├── SponsorService.cs           # Sponsor iş mantığı (ISponsorService implemente eder).
-│   ├── AboutService.cs             # Hakkımızda iş mantığı (IAboutService implemente eder).
-│   ├── ServiceService.cs           # Hizmetler iş mantığı (IServiceService implemente eder).
-│   └── AuthenticationService.cs    # Kimlik doğrulama iş mantığı (IAuthenticationService implemente eder).
+│   ├── Interfaces/
+│   │   ├── IAuthenticationService.cs
+│   │   ├── IAboutService.cs
+│   │   ├── ISponsorService.cs
+│   │   ├── ITeamService.cs
+│   │   └── IServiceService.cs
+│   ├── AboutService.cs
+│   ├── SponsorService.cs
+│   ├── TeamService.cs
+│   ├── ServiceService.cs
+│   └── AuthenticationService.cs
+│
+├── Data/
+│   ├── ApplicationDbContext.cs
 │
 ├── wwwroot/
-│   ├── css/                        # Özel CSS dosyaları.
-│   ├── js/                         # Özel JavaScript dosyaları.
-│   ├── img/                        # Gör+> img/                        # Görseller.
-│   ├── lib/                        # Bootstrap ve jQuery gibi harici kütüphaneler.
+│   ├── css/
+│   ├── js/
+│   ├── img/
+│   ├── lib/
 │
-├── appsettings.json                # Veritabanı bağlantı ayarları.
-├── Program.cs                      # Uygulama giriş noktası.
+├── appsettings.json
+├── Program.cs

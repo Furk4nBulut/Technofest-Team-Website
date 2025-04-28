@@ -1,0 +1,14 @@
+@model Techonefest_Team_Website.Models.About
+
+@{
+    ViewData["Title"] = "Hakkımızda";
+}
+
+@{
+    Layout = "_Layout";  // Layout'u burada kullanıyoruz
+}
+
+<div class="container mt-5">
+    <h1 class="display-4">@Model.Title</h1>
+    <p>@Model.Content</p>
+</div>

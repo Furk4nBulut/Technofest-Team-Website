@@ -19,6 +19,8 @@ builder.Services.AddIdentity<User, IdentityRole>()
 
 // IAuthenticationService için doğru implementasyon
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+// IAboutService ve AboutService ekleniyor.
+builder.Services.AddScoped<IAboutService, AboutService>();
 
 // MVC yapılandırması
 builder.Services.AddControllersWithViews();

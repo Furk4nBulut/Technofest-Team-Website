@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Admin Paneli";
+    }
+
+<div class="container py-5">
+    <h1 class="mb-4">Admin Paneline Hoş Geldiniz!</h1>
+    <p class="lead">Buradan içeriklerinizi yönetebilirsiniz:</p>
+
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Takım Üyeleri</h5>
+                    <p class="card-text">Takım bilgilerini düzenleyin.</p>
+                    <a href="@Url.Action("Index", "TeamAdmin")" class="btn btn-primary">Yönet</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Sponsorlar</h5>
+                    <p class="card-text">Sponsor bilgilerini düzenleyin.</p>
+                    <a href="@Url.Action("Index", "SponsorAdmin")" class="btn btn-primary">Yönet</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Hakkımızda</h5>
+                    <p class="card-text">Hakkımızda metnini düzenleyin.</p>
+                    <a href="@Url.Action("Index", "AboutAdmin")" class="btn btn-primary">Yönet</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Hizmetler</h5>
+                    <p class="card-text">Verilen hizmetleri düzenleyin.</p>
+                    <a href="@Url.Action("Index", "ServiceAdmin")" class="btn btn-primary">Yönet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

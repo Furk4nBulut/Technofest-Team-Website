@@ -20,35 +20,30 @@ namespace Techonefest_Team_Website.Controllers
         }
 
         [HttpPost]
-        [HttpPost]
         public async Task<IActionResult> Login(string email, string password, string returnUrl = null)
         {
             if (ModelState.IsValid)
             {
-                // Login işlemi
                 var result = await _authService.LoginAsync(email, password);
-        
+
                 if (result)
                 {
-                    // Eğer ReturnUrl varsa, ona yönlendir
                     if (!string.IsNullOrEmpty(returnUrl))
                     {
                         return Redirect(returnUrl);
                     }
-                    // Aksi takdirde ana sayfaya yönlendir
-                    return RedirectToAction("Index", "Home");
+
+                    // BAŞARILI login sonrası doğrudan Dashboard/Index'e yönlendiriyoruz.
+                    return RedirectToAction("Index", "Dashboard");
                 }
                 else
                 {
-                    // Hata mesajı ekleyin
-                    ModelState.AddModelError("", "Invalid email or password.");
+                    ModelState.AddModelError("", "Geçersiz e-posta veya şifre.");
                 }
             }
 
-            // Eğer model geçerli değilse veya login başarısızsa, tekrar login sayfasını döndür
             return View();
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Logout()
