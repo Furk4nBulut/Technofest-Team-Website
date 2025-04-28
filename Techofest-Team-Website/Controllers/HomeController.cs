@@ -1,20 +1,12 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Techofest_Team_Website.Controllers;
-
-public class HomeController : Controller
+namespace Techonefest_Team_Website.Controllers
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    public class HomeController : Controller
     {
-        _logger = logger;
+        public IActionResult Index()
+        {
+            return View();
+        }
     }
-
-    public IActionResult Index()
-    {
-        return View();
-    }
-    
 }

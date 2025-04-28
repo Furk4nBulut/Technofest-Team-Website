@@ -1,7 +1,47 @@
-﻿asp controlletr yaz login için ekranda
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
 
-<p>Home page</p>
+<div class="text-center">
+    <h1 class="display-4 mb-4">Hoş Geldiniz!</h1>
+    <p class="lead">Techonefest Team Website'ye hoş geldiniz! Teknoloji ve inovasyonla sizi geleceğe taşımayı hedefliyoruz.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-center mt-4">
+        <a href="@Url.Action("Index", "Service")" class="btn btn-primary btn-lg me-sm-3 mb-2 mb-sm-0">Hizmetlerimiz</a>
+        <a href="@Url.Action("Index", "Team")" class="btn btn-outline-primary btn-lg">Takımımız</a>
+    </div>
+</div>
 
-<p>Welcome to the home page!</p>
-
-<a href="@Url.Action("Login", "Account")">Login</a>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="Hizmetler">
+                <div class="card-body">
+                    <h5 class="card-title">Hizmetler</h5>
+                    <p class="card-text">Teknolojik çözümler ve ekipmanlar ile size en iyi hizmeti sunmayı amaçlıyoruz.</p>
+                    <a href="@Url.Action("Index", "Service")" class="btn btn-primary">Hizmetlerimiz</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="Takım">
+                <div class="card-body">
+                    <h5 class="card-title">Takımımız</h5>
+                    <p class="card-text">Alanında uzman ekibimiz ile sizi daha ileriye taşımayı hedefliyoruz.</p>
+                    <a href="@Url.Action("Index", "Team")" class="btn btn-primary">Takımımızı Tanıyın</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="Sponsorlar">
+                <div class="card-body">
+                    <h5 class="card-title">Sponsorlarımız</h5>
+                    <p class="card-text">Projelerimizde bizlere destek olan değerli sponsorlarımıza teşekkür ederiz.</p>
+                    <a href="@Url.Action("Index", "Sponsor")" class="btn btn-primary">Sponsorlarımız</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
