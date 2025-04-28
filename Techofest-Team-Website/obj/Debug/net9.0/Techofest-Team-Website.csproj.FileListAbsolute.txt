@@ -225,3 +225,11 @@
 /home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/obj/Debug/net9.0/Techofest-Team-Website.genruntimeconfig.cache
 /home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/obj/Debug/net9.0/ref/Techofest-Team-Website.dll
 /home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/obj/Debug/net9.0/Techofest-Team-Website.sourcelink.json
+/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/bin/Debug/net9.0/Microsoft.Extensions.Configuration.dll
+/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/bin/Debug/net9.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Json.dll
+/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll
+/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/bin/Debug/net9.0/Npgsql.dll
+/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
