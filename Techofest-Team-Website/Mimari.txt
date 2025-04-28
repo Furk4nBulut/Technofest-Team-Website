@@ -1,0 +1,72 @@
+MyTeknofestProject/
+│
+├── Controllers/
+│   ├── HomeController.cs           # Landing page ve genel sayfalar için.
+│   ├── AboutController.cs          # Hakkımızda sayfası için.
+│   ├── TeamController.cs           # Takım üyeleri sayfası için.
+│   ├── SponsorController.cs        # Sponsorlar sayfası için.
+│   ├── ServiceController.cs        # Hizmetler sayfası için.
+│   └── Admin/                      # Admin paneli için özel controller'lar.
+│       ├── DashboardController.cs  # Admin anasayfa.
+│       ├── TeamAdminController.cs  # Takım üyeleri yönetimi.
+│       ├── SponsorAdminController.cs # Sponsorlar yönetimi.
+│       ├── AboutAdminController.cs # Hakkımızda yönetimi.
+│       └── ServiceAdminController.cs # Hizmetler yönetimi.
+│
+├── Models/
+│   ├── TeamMember.cs               # Takım üyelerinin modeli.
+│   ├── Sponsor.cs                  # Sponsorların modeli.
+│   ├── Service.cs                  # Hizmetlerin modeli.
+│   ├── About.cs                    # Hakkımızda modeli.
+│
+├── Views/
+│   ├── Shared/                     # Ortak layout ve partial view'lar.
+│   │   ├── _Layout.cshtml          # Ana layout dosyası.
+│   │   ├── _Navbar.cshtml          # Navigasyon bar partial view.
+│   │   ├── _Footer.cshtml          # Footer partial view.
+│   │
+│   ├── Home/
+│   │   └── Index.cshtml            # Landing page.
+│   │
+│   ├── About/
+│   │   └── Index.cshtml            # Hakkımızda sayfası.
+│   │
+│   ├── Team/
+│   │   └── Index.cshtml            # Takım üyeleri sayfası.
+│   │
+│   ├── Sponsor/
+│   │   └── Index.cshtml            # Sponsorlar sayfası.
+│   │
+│   ├── Service/
+│   │   └── Index.cshtml            # Hizmetler sayfası.
+│   │
+│   └── Admin/                      # Admin paneli için view'lar.
+│       ├── Dashboard/
+│       │   └── Index.cshtml        # Admin giriş sayfası.
+│       ├── Team/
+│       │   └── Index.cshtml        # Takım üyelerini listeleme.
+│       ├── Sponsor/
+│       │   └── Index.cshtml        # Sponsorları listeleme.
+│       ├── About/
+│       │   └── Index.cshtml        # Hakkımızda düzenleme.
+│       ├── Service/
+│       │   └── Index.cshtml        # Hizmetleri düzenleme.
+│
+├── Data/
+│   ├── ApplicationDbContext.cs     # Entity Framework veritabanı bağlamı.
+│
+├── Services/
+│   ├── TeamService.cs              # Takım üyeleri iş mantığı.
+│   ├── SponsorService.cs           # Sponsor iş mantığı.
+│   ├── AboutService.cs             # Hakkımızda iş mantığı.
+│   ├── ServiceService.cs           # Hizmetler iş mantığı.
+│
+├── wwwroot/
+│   ├── css/                        # Özel CSS dosyaları.
+│   ├── js/                         # Özel JavaScript dosyaları.
+│   ├── img/                        # Görseller.
+│   ├── lib/                        # Bootstrap ve jQuery gibi harici kütüphaneler.
+│
+├── appsettings.json                # Veritabanı bağlantı ayarları.
+├── Program.cs                      # Uygulama giriş noktası.
+├── Startup.cs                      # Middleware ve servis konfigürasyonları.
