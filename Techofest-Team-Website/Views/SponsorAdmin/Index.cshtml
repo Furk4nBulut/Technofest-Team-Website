@@ -1,0 +1,32 @@
+@model IEnumerable<Techonefest_Team_Website.Models.Sponsor>
+
+@{
+    ViewData["Title"] = "Sponsor Listesi";
+}
+
+<h1>Sponsorlar</h1>
+
+<a class="btn btn-primary" href="@Url.Action("Create")">Yeni Sponsor Ekle</a>
+
+<table class="table mt-3">
+    <thead>
+    <tr>
+        <th>İsim</th>
+        <th>Logo Yolu</th>
+        <th>İşlemler</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var sponsor in Model)
+    {
+        <tr>
+            <td>@sponsor.Name</td>
+            <td>@sponsor.LogoPath</td>
+            <td>
+                <a class="btn btn-sm btn-warning" href="@Url.Action("Edit", new { id = sponsor.Id })">Düzenle</a>
+                <a class="btn btn-sm btn-danger" href="@Url.Action("Delete", new { id = sponsor.Id })">Sil</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

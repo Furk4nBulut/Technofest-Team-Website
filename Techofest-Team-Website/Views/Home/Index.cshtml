@@ -1,6 +1,4 @@
-﻿@model Techonefest_Team_Website.Models.About
-
-@{
+﻿@{
     ViewData["Title"] = "Ana Sayfa";
     Layout = "_Layout"; // Layout'u belirtmek
 }
@@ -52,8 +50,27 @@
 <!-- Hakkımızda Kısmı -->
 <div class="container mt-5">
     <h3>Hakkımızda</h3>
-    <p>@Model.Content</p>
+    <p>@ViewBag.AboutContent.Content</p>
     <a href="@Url.Action("Index", "About")" class="btn btn-primary">Daha fazla bilgi</a>
+</div>
+
+<!-- Sponsorlar Kısmı -->
+<div class="container mt-5">
+    <h3>Sponsorlarımız</h3>
+    <div class="row">
+        @foreach (var sponsor in ViewBag.Sponsors)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="@sponsor.LogoPath" class="card-img-top" alt="@sponsor.Name">
+                    <div class="card-body">
+                        <h5 class="card-title">@sponsor.Name</h5>
+                        <a href="@sponsor.Url" class="btn btn-primary" target="_blank">Sponsorun Web Sitesi</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>
 
 <!-- Takım Kısmı -->

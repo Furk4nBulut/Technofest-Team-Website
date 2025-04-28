@@ -68,6 +68,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19OYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Sponsor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3BvbnNvci9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/SponsorAdmin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3BvbnNvckFkbWluL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/SponsorAdmin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3BvbnNvckFkbWluL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/SponsorAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3BvbnNvckFkbWluL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Team/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhbS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

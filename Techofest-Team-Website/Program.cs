@@ -23,6 +23,8 @@ builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IAboutService, AboutService>();
 // ITeamService ve TeamService kaydını ekleyin
 builder.Services.AddScoped<ITeamService, TeamService>();
+// ISponsorService ve SponsorService kaydını ekleyin
+builder.Services.AddScoped<ISponsorService, SponsorService>();
 
 
 // MVC yapılandırması

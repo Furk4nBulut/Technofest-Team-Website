@@ -19,7 +19,6 @@
 
     <ItemGroup>
       <Folder Include="Views\Service\" />
-      <Folder Include="Views\Sponsor\" />
     </ItemGroup>
 
     <ItemGroup>

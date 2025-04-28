@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Sponsorlarımız";
+    Layout = "_Layout"; // Layout'u belirtmek
+}
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+
+    <div class="row">
+        @foreach (var sponsor in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="@sponsor.LogoPath" class="card-img-top" alt="@sponsor.Name">
+                    <div class="card-body">
+                        <h5 class="card-title">@sponsor.Name</h5>
+                        <p class="card-text">Sponsor ID: @sponsor.Id</p>
+                        <a href="@sponsor.Url" class="btn btn-primary" target="_blank">Sponsorun Web Sitesi</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

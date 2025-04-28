@@ -1,0 +1,30 @@
+@model Techonefest_Team_Website.Models.Sponsor
+
+@{
+    ViewData["Title"] = "Sponsor Ekle";
+    Layout = "_Layout"; // Layout sayfası
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Name">Sponsor Adı</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="LogoPath">Logo Yolu</label>
+        <input asp-for="LogoPath" class="form-control" />
+        <span asp-validation-for="LogoPath" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Url">Web Sitesi URL</label>
+        <input asp-for="Url" class="form-control" />
+        <span asp-validation-for="Url" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
