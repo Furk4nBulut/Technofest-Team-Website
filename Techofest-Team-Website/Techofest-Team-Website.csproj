@@ -7,4 +7,32 @@
         <RootNamespace>Techofest_Team_Website</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4">
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <PrivateAssets>all</PrivateAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Views\Admin\About\" />
+      <Folder Include="Views\Admin\Dashboard\" />
+      <Folder Include="Views\Admin\Service\" />
+      <Folder Include="Views\Admin\Sponsor\" />
+      <Folder Include="Views\Admin\Team\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Admin\Account\Login.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Account\Register.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Views\Account\Login.cshtml" />
+      <AdditionalFiles Include="Views\Account\Register.cshtml" />
+    </ItemGroup>
+
 </Project>

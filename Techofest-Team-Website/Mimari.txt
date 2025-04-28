@@ -1,6 +1,7 @@
-MyTeknofestProject/
+Techonefest-Team-Website/
 │
 ├── Controllers/
+│   ├── AccountController.cs        # Kullanıcı girişi ve kaydı için.
 │   ├── HomeController.cs           # Landing page ve genel sayfalar için.
 │   ├── AboutController.cs          # Hakkımızda sayfası için.
 │   ├── TeamController.cs           # Takım üyeleri sayfası için.
@@ -18,6 +19,7 @@ MyTeknofestProject/
 │   ├── Sponsor.cs                  # Sponsorların modeli.
 │   ├── Service.cs                  # Hizmetlerin modeli.
 │   ├── About.cs                    # Hakkımızda modeli.
+│   ├── User.cs                     # Kullanıcı modeli.
 │
 ├── Views/
 │   ├── Shared/                     # Ortak layout ve partial view'lar.
@@ -56,17 +58,24 @@ MyTeknofestProject/
 │   ├── ApplicationDbContext.cs     # Entity Framework veritabanı bağlamı.
 │
 ├── Services/
-│   ├── TeamService.cs              # Takım üyeleri iş mantığı.
-│   ├── SponsorService.cs           # Sponsor iş mantığı.
-│   ├── AboutService.cs             # Hakkımızda iş mantığı.
-│   ├── ServiceService.cs           # Hizmetler iş mantığı.
+│   ├── Interfaces/                 # Yeni eklenen interface klasörü.
+│   │   ├── ITeamService.cs         # Takım üyeleri servis arayüzü.
+│   │   ├── ISponsorService.cs      # Sponsorlar servis arayüzü.
+│   │   ├── IAboutService.cs        # Hakkımızda servis arayüzü.
+│   │   ├── IServiceService.cs      # Hizmetler servis arayüzü.
+│   │   └── IAuthenticationService.cs # Kimlik doğrulama servis arayüzü.
+│   │
+│   ├── TeamService.cs              # Takım üyeleri iş mantığı (ITeamService implemente eder).
+│   ├── SponsorService.cs           # Sponsor iş mantığı (ISponsorService implemente eder).
+│   ├── AboutService.cs             # Hakkımızda iş mantığı (IAboutService implemente eder).
+│   ├── ServiceService.cs           # Hizmetler iş mantığı (IServiceService implemente eder).
+│   └── AuthenticationService.cs    # Kimlik doğrulama iş mantığı (IAuthenticationService implemente eder).
 │
 ├── wwwroot/
 │   ├── css/                        # Özel CSS dosyaları.
 │   ├── js/                         # Özel JavaScript dosyaları.
-│   ├── img/                        # Görseller.
+│   ├── img/                        # Gör+> img/                        # Görseller.
 │   ├── lib/                        # Bootstrap ve jQuery gibi harici kütüphaneler.
 │
 ├── appsettings.json                # Veritabanı bağlantı ayarları.
 ├── Program.cs                      # Uygulama giriş noktası.
-├── Startup.cs                      # Middleware ve servis konfigürasyonları.

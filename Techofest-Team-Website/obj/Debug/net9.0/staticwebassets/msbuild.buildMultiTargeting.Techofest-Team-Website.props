@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Techofest-Team-Website.props" />
+</Project>
