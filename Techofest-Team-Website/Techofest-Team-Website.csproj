@@ -18,10 +18,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Views\Service\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <_ContentIncludedByDefault Remove="Views\Admin\Account\Login.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Admin\Account\Register.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Admin\Dashboard\Index.cshtml" />

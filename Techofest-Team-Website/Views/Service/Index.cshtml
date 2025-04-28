@@ -1,0 +1,24 @@
+@model IEnumerable<Techonefest_Team_Website.Models.Service>
+
+@{
+    ViewData["Title"] = "Hizmetler";
+    Layout = "_Layout"; // Layout'u belirtmek
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    @foreach (var service in Model)
+    {
+        <div class="col-md-4">
+            <div class="card">
+                <img src="@service.IconPath" class="card-img-top" alt="@service.Name" style="height: 200px; object-fit: cover;" />
+                <div class="card-body">
+                    <h5 class="card-title">@service.Name</h5>
+                    <p class="card-text">@service.Description</p>
+                    <a href="#" class="btn btn-primary">Detaylar</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

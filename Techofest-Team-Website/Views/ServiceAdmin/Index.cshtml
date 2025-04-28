@@ -1,0 +1,44 @@
+@model IEnumerable<Techonefest_Team_Website.Models.Service>
+
+@{
+    ViewData["Title"] = "Servisler";
+    Layout = "_Layout"; // Layout'u belirt
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a href="@Url.Action("Create", "ServiceAdmin")" class="btn btn-primary">Yeni Servis Ekle</a>
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Servis Adı</th>
+        <th>Açıklama</th>
+        <th>Icon</th>
+        <th>İşlemler</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var service in Model)
+    {
+        <tr>
+            <td>@service.Id</td>
+            <td>@service.Name</td>
+            <td>@service.Description</td>
+            <td>
+                @if (!string.IsNullOrEmpty(service.IconPath))
+                {
+                    <img src="@service.IconPath" alt="Icon" style="width: 50px;" />
+                }
+            </td>
+            <td>
+                <a href="@Url.Action("Edit", "ServiceAdmin", new { id = service.Id })" class="btn btn-warning btn-sm">Düzenle</a>
+                <a href="@Url.Action("Delete", "ServiceAdmin", new { id = service.Id })" class="btn btn-danger btn-sm">Sil</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

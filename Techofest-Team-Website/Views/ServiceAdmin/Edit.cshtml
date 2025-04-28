@@ -1,0 +1,30 @@
+@model Techonefest_Team_Website.Models.Service
+
+@{
+    ViewData["Title"] = "Servis Düzenle";
+    Layout = "_Layout"; // Layout'u belirt
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label for="Name">Servis Adı</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Description">Açıklama</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="IconPath">Icon Yolu</label>
+        <input asp-for="IconPath" class="form-control" />
+        <span asp-validation-for="IconPath" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>

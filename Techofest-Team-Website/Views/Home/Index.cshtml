@@ -12,38 +12,23 @@
     </div>
 </div>
 
+<!-- Hizmetler Kısmı -->
 <div class="container mt-5">
+    <h3>Hizmetlerimiz</h3>
     <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="Hizmetler">
-                <div class="card-body">
-                    <h5 class="card-title">Hizmetler</h5>
-                    <p class="card-text">Teknolojik çözümler ve ekipmanlar ile size en iyi hizmeti sunmayı amaçlıyoruz.</p>
-                    <a href="@Url.Action("Index", "Service")" class="btn btn-primary">Hizmetlerimiz</a>
+        @foreach (var service in ViewBag.Services)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="@service.IconPath" class="card-img-top" alt="@service.Name" style="height: 200px; object-fit: cover;" />
+                    <div class="card-body">
+                        <h5 class="card-title">@service.Name</h5>
+                        <p class="card-text">@service.Description</p>
+                        <a href="@Url.Action("Index", "Service")" class="btn btn-primary">Hizmetlerimiz</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="Takım">
-                <div class="card-body">
-                    <h5 class="card-title">Takımımız</h5>
-                    <p class="card-text">Alanında uzman ekibimiz ile sizi daha ileriye taşımayı hedefliyoruz.</p>
-                    <a href="@Url.Action("Index", "Team")" class="btn btn-primary">Takımımızı Tanıyın</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="Sponsorlar">
-                <div class="card-body">
-                    <h5 class="card-title">Sponsorlarımız</h5>
-                    <p class="card-text">Projelerimizde bizlere destek olan değerli sponsorlarımıza teşekkür ederiz.</p>
-                    <a href="@Url.Action("Index", "Sponsor")" class="btn btn-primary">Sponsorlarımız</a>
-                </div>
-            </div>
-        </div>
+        }
     </div>
 </div>
 
