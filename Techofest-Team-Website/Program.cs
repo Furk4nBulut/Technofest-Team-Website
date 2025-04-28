@@ -18,12 +18,10 @@ builder.Services.AddIdentity<User, IdentityRole>()
     .AddDefaultTokenProviders();
 
 // IAuthenticationService için doğru implementasyon
-builder.Services.AddScoped<IAuthenticationService, Techonefest_Team_Website.Services.AuthenticationService>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
 // MVC yapılandırması
 builder.Services.AddControllersWithViews();
-
-
 
 var app = builder.Build();
 
@@ -37,21 +35,44 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseRouting();
 
-app.UseAuthentication();
-app.UseAuthorization();
+app.UseRouting();
+app.UseAuthentication();  // Kullanıcı doğrulaması önce yapılmalı
+app.UseAuthorization();   // Yetkilendirme sonra yapılmalı
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-// Program.cs içinde, app.Run() öncesine ekleyin (yalnızca bir kez çalıştırın)
+// Kullanıcıyı eklemek için sadece bir kez çalışacak kod
 using (var scope = app.Services.CreateScope())
 {
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
-    var user = new User { UserName = "admin@mail.com", Email = "admin@example.com", FullName = "Admin User", RegistrationDate = DateTime.UtcNow };
-    await userManager.CreateAsync(user, "admin");
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+    var user = await userManager.FindByEmailAsync("admin@example.com");
+
+    // Eğer admin kullanıcısı yoksa
+    if (user == null)
+    {
+        user = new User
+        {
+            UserName = "admin@example.com",
+            Email = "admin@example.com"
+        };
+
+        var result = await userManager.CreateAsync(user, "Admin123!"); // Parola "admin"
+        if (result.Succeeded)
+        {
+            // Admin rolünü ekleyelim, önceden var mı kontrol edelim
+            var roleExist = await roleManager.RoleExistsAsync("Admin");
+            if (!roleExist)
+            {
+                await roleManager.CreateAsync(new IdentityRole("Admin"));
+            }
+            await userManager.AddToRoleAsync(user, "Admin");
+        }
+    }
 }
 
 app.Run();

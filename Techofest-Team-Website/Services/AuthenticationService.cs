@@ -22,9 +22,17 @@ namespace Techonefest_Team_Website.Services
             if (user == null)
                 return false;
 
+            // Kullanıcıyı giriş yapmaya çalışalım
             var result = await _signInManager.PasswordSignInAsync(user, password, isPersistent: false, lockoutOnFailure: false);
-            return result.Succeeded;
+    
+            if (result.Succeeded)
+            {
+                return true; // Giriş başarılı
+            }
+
+            return false; // Giriş başarısız
         }
+
 
         public async Task LogoutAsync()
         {

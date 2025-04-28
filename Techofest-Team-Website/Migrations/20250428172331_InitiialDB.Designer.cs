@@ -11,7 +11,7 @@ using Techonefest_Team_Website.Data;
 namespace Techofest_Team_Website.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250428171519_InitiialDB")]
+    [Migration("20250428172331_InitiialDB")]
     partial class InitiialDB
     {
         /// <inheritdoc />
@@ -259,10 +259,6 @@ namespace Techofest_Team_Website.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("INTEGER");
 
@@ -285,9 +281,6 @@ namespace Techofest_Team_Website.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("RegistrationDate")
-                        .HasColumnType("TEXT");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("TEXT");
