@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GhjWg1AWHUB65WpPdklfoLGZSWf+v7Mvs8l7JJXT8PE=",
+  "Hash": "5tVh3i0E6/okTgjWLT67eVvAR7zXf1T9smLwI9uhY+8=",
   "Source": "Techofest-Team-Website",
   "BasePath": "_content/Techofest-Team-Website",
   "Mode": "Default",
@@ -1443,6 +1443,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/wwwroot/img/teknofest.webp",
+      "SourceId": "Techofest-Team-Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/wwwroot/",
+      "BasePath": "_content/Techofest-Team-Website",
+      "RelativePath": "img/teknofest#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m5edldcohy",
+      "Integrity": "Fi6+uzn6ZojemLgb5hgzo4AsHsfFWmOR2IC49PK+aHM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/teknofest.webp"
     },
     {
       "Identity": "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/wwwroot/js/site.js",
@@ -3320,6 +3341,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-tOy5kS1PTkjkEg7bjV8bJa0VpoEZJUHnbqYmm1YyhMg="
+        }
+      ]
+    },
+    {
+      "Route": "img/teknofest.m5edldcohy.webp",
+      "AssetFile": "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/wwwroot/img/teknofest.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "112042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Fi6+uzn6ZojemLgb5hgzo4AsHsfFWmOR2IC49PK+aHM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 12:26:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m5edldcohy"
+        },
+        {
+          "Name": "label",
+          "Value": "img/teknofest.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Fi6+uzn6ZojemLgb5hgzo4AsHsfFWmOR2IC49PK+aHM="
+        }
+      ]
+    },
+    {
+      "Route": "img/teknofest.webp",
+      "AssetFile": "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/wwwroot/img/teknofest.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "112042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Fi6+uzn6ZojemLgb5hgzo4AsHsfFWmOR2IC49PK+aHM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 12:26:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Fi6+uzn6ZojemLgb5hgzo4AsHsfFWmOR2IC49PK+aHM="
         }
       ]
     },

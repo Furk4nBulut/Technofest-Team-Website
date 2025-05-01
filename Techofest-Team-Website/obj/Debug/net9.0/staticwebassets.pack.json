@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/wwwroot/img/teknofest.webp",
+      "PackagePath": "staticwebassets/img/teknofest.webp"
+    },
+    {
       "Id": "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
