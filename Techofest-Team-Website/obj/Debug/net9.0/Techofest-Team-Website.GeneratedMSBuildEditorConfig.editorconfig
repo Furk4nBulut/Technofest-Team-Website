@@ -17,119 +17,119 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Techofest_Team_Website
 build_property.RootNamespace = Techofest_Team_Website
-build_property.ProjectDir = /home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/
+build_property.ProjectDir = /home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website
+build_property.MSBuildProjectDirectory = /home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Account/Login.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = 
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Account/Register.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/About/Index.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWJvdXQvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/AboutAdmin/Edit.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/AboutAdmin/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWJvdXRBZG1pbi9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/AboutAdmin/Index.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/AboutAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWJvdXRBZG1pbi9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Dashboard/Index.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Home/Index.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Service/Index.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/Service/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VydmljZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/ServiceAdmin/Create.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/ServiceAdmin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VydmljZUFkbWluL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/ServiceAdmin/Edit.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/ServiceAdmin/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VydmljZUFkbWluL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/ServiceAdmin/Index.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/ServiceAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VydmljZUFkbWluL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Shared/_AdminLayout.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Shared/_Footer.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/Shared/_Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Shared/_Navbar.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/Shared/_Navbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19OYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Sponsor/Index.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/Sponsor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3BvbnNvci9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/SponsorAdmin/Create.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/SponsorAdmin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3BvbnNvckFkbWluL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/SponsorAdmin/Edit.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/SponsorAdmin/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3BvbnNvckFkbWluL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/SponsorAdmin/Index.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/SponsorAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3BvbnNvckFkbWluL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Team/Index.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/Team/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhbS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/TeamAdmin/Create.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/TeamAdmin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhbUFkbWluL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/TeamAdmin/Delete.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/TeamAdmin/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhbUFkbWluL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/TeamAdmin/Edit.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/TeamAdmin/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhbUFkbWluL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/TeamAdmin/Index.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/TeamAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhbUFkbWluL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/_ViewImports.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/_ViewStart.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Views/Shared/_Layout.cshtml]
+[/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-xfpj8aqtrt

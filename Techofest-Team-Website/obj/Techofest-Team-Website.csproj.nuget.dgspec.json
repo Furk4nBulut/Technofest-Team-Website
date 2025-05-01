@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Techofest-Team-Website.csproj": {}
+    "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Techofest-Team-Website.csproj": {}
   },
   "projects": {
-    "/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Techofest-Team-Website.csproj": {
+    "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Techofest-Team-Website.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Techofest-Team-Website.csproj",
+        "projectUniqueName": "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Techofest-Team-Website.csproj",
         "projectName": "Techofest-Team-Website",
-        "projectPath": "/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Techofest-Team-Website.csproj",
+        "projectPath": "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Techofest-Team-Website.csproj",
         "packagesPath": "/home/furkanblt/.nuget/packages/",
-        "outputPath": "/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/obj/",
+        "outputPath": "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/furkanblt/.nuget/NuGet/NuGet.Config"

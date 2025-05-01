@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7wyR1gq0eaI=",
+  "dgSpecHash": "pQD4xOjDFQo=",
   "success": true,
-  "projectFilePath": "/home/furkanblt/RiderProjects/Techofest-Team-Website/Techofest-Team-Website/Techofest-Team-Website.csproj",
+  "projectFilePath": "/home/furkanblt/RiderProjects/Technofest-Team-Website/Techofest-Team-Website/Techofest-Team-Website.csproj",
   "expectedPackageFiles": [
     "/home/furkanblt/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/furkanblt/.nuget/packages/microsoft.aspnetcore.cryptography.internal/9.0.4/microsoft.aspnetcore.cryptography.internal.9.0.4.nupkg.sha512",

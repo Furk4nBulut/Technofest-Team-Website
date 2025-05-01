@@ -15,11 +15,15 @@
                 <a asp-controller="Team" asp-action="Index" class="text-white hover:text-blue-200 px-3 py-2 text-sm font-medium">Takım</a>
                 <a asp-controller="Sponsor" asp-action="Index" class="text-white hover:text-blue-200 px-3 py-2 text-sm font-medium">Sponsorlar</a>
                 <a asp-controller="Service" asp-action="Index" class="text-white hover:text-blue-200 px-3 py-2 text-sm font-medium">Hizmetler</a>
-                
+
                 @if (User.Identity.IsAuthenticated)
                 {
                     <a asp-controller="Dashboard" asp-action="Index" class="text-white hover:text-blue-200 px-3 py-2 text-sm font-medium">Yönetim</a>
-                    <a asp-controller="Account" asp-action="Logout" class="bg-white text-primary px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-50">Çıkış Yap</a>
+                    <form asp-controller="Account" asp-action="Logout" method="post" class="inline">
+                        <button type="submit" class="bg-white text-primary px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-50">
+                            Çıkış Yap
+                        </button>
+                    </form>
                 }
                 else
                 {
@@ -35,7 +39,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Mobile menu -->
     <div class="md:hidden hidden bg-secondary" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -44,11 +48,15 @@
             <a asp-controller="Team" asp-action="Index" class="text-white block px-3 py-2 rounded-md text-base font-medium">Takım</a>
             <a asp-controller="Sponsor" asp-action="Index" class="text-white block px-3 py-2 rounded-md text-base font-medium">Sponsorlar</a>
             <a asp-controller="Service" asp-action="Index" class="text-white block px-3 py-2 rounded-md text-base font-medium">Hizmetler</a>
-            
+
             @if (User.Identity.IsAuthenticated)
             {
                 <a asp-controller="Dashboard" asp-action="Index" class="text-white block px-3 py-2 rounded-md text-base font-medium">Yönetim</a>
-                <a asp-controller="Account" asp-action="Logout" class="bg-white text-primary block px-3 py-2 rounded-md text-base font-medium mt-2">Çıkış Yap</a>
+                <form asp-controller="Account" asp-action="Logout" method="post" class="mt-2">
+                    <button type="submit" class="bg-white text-primary block w-full px-3 py-2 rounded-md text-base font-medium">
+                        Çıkış Yap
+                    </button>
+                </form>
             }
             else
             {
