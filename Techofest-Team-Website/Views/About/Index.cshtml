@@ -4,11 +4,25 @@
     ViewData["Title"] = "Hakkımızda";
 }
 
-@{
-    Layout = "_Layout";  // Layout'u burada kullanıyoruz
-}
-
-<div class="container mt-5">
-    <h1 class="display-4">@Model.Title</h1>
-    <p>@Model.Content</p>
-</div>
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">@Model.Title</h1>
+            <div class="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
+        
+        <div class="prose prose-lg max-w-4xl mx-auto text-gray-600">
+            @Html.Raw(Model.Content)
+        </div>
+        
+        <div class="mt-12 flex justify-center">
+            <a asp-controller="Home" asp-action="Index" 
+               class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-secondary">
+                Ana Sayfaya Dön
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>

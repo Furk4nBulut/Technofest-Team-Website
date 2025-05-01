@@ -1,68 +1,78 @@
 ﻿@{
     ViewData["Title"] = "Ana Sayfa";
-    Layout = "_Layout"; // Layout'u belirtmek
+    Layout = "_Layout";
 }
 
-<div class="text-center">
-    <h1 class="display-4 mb-4">Hoş Geldiniz!</h1>
-    <p class="lead">Techonefest Team Website'ye hoş geldiniz! Teknoloji ve inovasyonla sizi geleceğe taşımayı hedefliyoruz.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-center mt-4">
-        <a href="@Url.Action("Index", "Service")" class="btn btn-primary btn-lg me-sm-3 mb-2 mb-sm-0">Hizmetlerimiz</a>
-        <a href="@Url.Action("Index", "Team")" class="btn btn-outline-primary btn-lg">Takımımız</a>
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-primary to-secondary text-white py-20 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Hoş Geldiniz!</h1>
+        <p class="text-xl md:text-2xl mb-8">Techonefest Team Website'ye hoş geldiniz! Teknoloji ve inovasyonla sizi geleceğe taşımayı hedefliyoruz.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a asp-controller="Service" asp-action="Index" class="bg-white text-primary px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-50 transition duration-300">Hizmetlerimiz</a>
+            <a asp-controller="Team" asp-action="Index" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-white hover:text-primary transition duration-300">Takımımız</a>
+        </div>
     </div>
-</div>
+</section>
 
 <!-- Hizmetler Kısmı -->
-<div class="container mt-5">
-    <h3>Hizmetlerimiz</h3>
-    <div class="row">
-        @foreach (var service in ViewBag.Services)
-        {
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="@service.IconPath" class="card-img-top" alt="@service.Name" style="height: 200px; object-fit: cover;" />
-                    <div class="card-body">
-                        <h5 class="card-title">@service.Name</h5>
-                        <p class="card-text">@service.Description</p>
-                        <a href="@Url.Action("Index", "Service")" class="btn btn-primary">Hizmetlerimiz</a>
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12">Hizmetlerimiz</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @foreach (var service in ViewBag.Services)
+            {
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="@service.IconPath" alt="@service.Name" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">@service.Name</h3>
+                        <p class="text-gray-600 mb-4">@service.Description</p>
+                        <a asp-controller="Service" asp-action="Index" class="inline-block text-primary font-medium hover:text-secondary">Daha Fazla →</a>
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
-</div>
+</section>
 
 <!-- Hakkımızda Kısmı -->
-<div class="container mt-5">
-    <h3>Hakkımızda</h3>
-    <p>@ViewBag.AboutContent.Content</p>
-    <a href="@Url.Action("Index", "About")" class="btn btn-primary">Daha fazla bilgi</a>
-</div>
+<section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-3xl font-bold mb-6">Hakkımızda</h2>
+                <p class="text-gray-600 mb-6">@ViewBag.AboutContent.Content</p>
+                <a asp-controller="About" asp-action="Index" class="inline-block bg-primary text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-secondary transition duration-300">Daha fazla bilgi</a>
+            </div>
+            <div class="md:w-1/2 md:pl-12">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Takım Çalışması" class="rounded-lg shadow-md w-full h-auto">
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Sponsorlar Kısmı -->
-<div class="container mt-5">
-    <h3>Sponsorlarımız</h3>
-    <div class="row">
-        @foreach (var sponsor in ViewBag.Sponsors)
-        {
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="@sponsor.LogoPath" class="card-img-top" alt="@sponsor.Name">
-                    <div class="card-body">
-                        <h5 class="card-title">@sponsor.Name</h5>
-                        <a href="@sponsor.Url" class="btn btn-primary" target="_blank">Sponsorun Web Sitesi</a>
-                    </div>
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12">Sponsorlarımız</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            @foreach (var sponsor in ViewBag.Sponsors)
+            {
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition duration-300">
+                    <img src="@sponsor.LogoPath" alt="@sponsor.Name" class="h-20 object-contain mb-4">
+                    <h3 class="text-lg font-semibold mb-2 text-center">@sponsor.Name</h3>
+                    <a href="@sponsor.Url" target="_blank" class="text-primary hover:text-secondary text-sm font-medium">Web Sitesi</a>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
-</div>
+</section>
 
 <!-- Takım Kısmı -->
-<div class="container mt-5">
-    <h3>Takımımız</h3>
-    <p>Alanında uzman ekibimizle birlikte projelere yön veriyoruz.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-center mt-4">
-        <a href="@Url.Action("Index", "Team")" class="btn btn-primary btn-lg me-sm-3 mb-2 mb-sm-0">Takımımızı Tanıyın</a>
+<section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Takımımız</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto mb-8">Alanında uzman ekibimizle birlikte projelere yön veriyoruz. Takımımızı tanımak için butona tıklayın.</p>
+        <a asp-controller="Team" asp-action="Index" class="inline-block bg-primary text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-secondary transition duration-300">Takımımızı Tanıyın</a>
     </div>
-</div>
+</section>

@@ -1,32 +1,55 @@
 @model IEnumerable<Techonefest_Team_Website.Models.Sponsor>
 
 @{
-    ViewData["Title"] = "Sponsor Listesi";
+    ViewData["Title"] = "Sponsor Yönetimi";
+    Layout = "_AdminLayout";
 }
 
-<h1>Sponsorlar</h1>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex justify-between items-center mb-8">
+        <h1 class="text-2xl font-bold text-gray-900">@ViewData["Title"]</h1>
+        <a asp-action="Create" 
+           class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+            </svg>
+            Yeni Sponsor Ekle
+        </a>
+    </div>
 
-<a class="btn btn-primary" href="@Url.Action("Create")">Yeni Sponsor Ekle</a>
-
-<table class="table mt-3">
-    <thead>
-    <tr>
-        <th>İsim</th>
-        <th>Logo Yolu</th>
-        <th>İşlemler</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var sponsor in Model)
-    {
-        <tr>
-            <td>@sponsor.Name</td>
-            <td>@sponsor.LogoPath</td>
-            <td>
-                <a class="btn btn-sm btn-warning" href="@Url.Action("Edit", new { id = sponsor.Id })">Düzenle</a>
-                <a class="btn btn-sm btn-danger" href="@Url.Action("Delete", new { id = sponsor.Id })">Sil</a>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+    <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sponsor Adı</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Logo</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Web Sitesi</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    @foreach (var sponsor in Model)
+                    {
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">@sponsor.Name</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                @if (!string.IsNullOrEmpty(sponsor.LogoPath))
+                                {
+                                    <img src="@sponsor.LogoPath" alt="@sponsor.Name Logo" class="h-10 w-10 object-contain">
+                                }
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 hover:text-blue-800">
+                                <a href="@sponsor.Url" target="_blank" class="truncate max-w-xs block">@sponsor.Url</a>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                <a asp-action="Edit" asp-route-id="@sponsor.Id" class="text-primary hover:text-secondary mr-4">Düzenle</a>
+                                <a asp-action="Delete" asp-route-id="@sponsor.Id" class="text-red-600 hover:text-red-900">Sil</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
