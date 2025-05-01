@@ -1,0 +1,205 @@
+<!-- Desktop Sidebar -->
+<div class="hidden md:flex md:flex-shrink-0">
+    <div class="flex flex-col w-64 bg-white border-r border-gray-200">
+        <div class="h-0 flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+            <!-- Sidebar Header -->
+            <div class="flex items-center px-4 mb-5">
+                <img class="h-8 w-auto" src="/images/techonefest-logo.png" alt="Techonefest Logo">
+                <span class="ml-2 text-lg font-semibold text-gray-900">Admin Panel</span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="flex-1 px-2 space-y-1">
+                <!-- Dashboard -->
+                <a asp-controller="Dashboard" asp-action="Index" 
+                   class="@GetNavItemClass("Dashboard")">
+                    <svg class="@GetNavIconClass("Dashboard")" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    Dashboard
+                </a>
+
+                <!-- About Management -->
+                <a asp-controller="AboutAdmin" asp-action="Index" 
+                   class="@GetNavItemClass("AboutAdmin")">
+                    <svg class="@GetNavIconClass("AboutAdmin")" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                    Hakkımızda
+                </a>
+
+                <!-- Team Management -->
+                <a asp-controller="TeamAdmin" asp-action="Index" 
+                   class="@GetNavItemClass("TeamAdmin")">
+                    <svg class="@GetNavIconClass("TeamAdmin")" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    Takım Yönetimi
+                </a>
+
+                <!-- Sponsor Management -->
+                <a asp-controller="SponsorAdmin" asp-action="Index" 
+                   class="@GetNavItemClass("SponsorAdmin")">
+                    <svg class="@GetNavIconClass("SponsorAdmin")" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z" />
+                    </svg>
+                    Sponsorlar
+                </a>
+
+                <!-- Services Management -->
+                <a asp-controller="ServiceAdmin" asp-action="Index" 
+                   class="@GetNavItemClass("ServiceAdmin")">
+                    <svg class="@GetNavIconClass("ServiceAdmin")" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Hizmetler
+                </a>
+
+ git
+            </nav>
+        </div>
+
+        <!-- User Profile Section -->
+        <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
+            <div class="flex items-center">
+                <div>
+                    <img class="h-9 w-9 rounded-full" src="/images/user-avatar.png" alt="User avatar">
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-700">@User.Identity.Name</p>
+                    <a asp-controller="Account" asp-action="Profile" class="text-xs font-medium text-primary hover:text-secondary">Profilini Gör</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Sidebar -->
+<div class="md:hidden hidden bg-white shadow-lg fixed inset-0 z-40" id="admin-mobile-sidebar">
+    <div class="fixed inset-0">
+        <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
+    </div>
+    <div class="relative flex-1 flex flex-col max-w-xs w-full bg-white">
+        <div class="absolute top-0 right-0 -mr-14 p-1">
+            <button id="mobile-sidebar-close" class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600">
+                <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+            <!-- Mobile Sidebar Header -->
+            <div class="flex-shrink-0 flex items-center px-4">
+                <img class="h-8 w-auto" src="/images/techonefest-logo.png" alt="Techonefest Logo">
+                <span class="ml-2 text-lg font-semibold text-gray-900">Admin Panel</span>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <nav class="mt-5 px-2 space-y-1">
+                <!-- Dashboard -->
+                <a asp-controller="Dashboard" asp-action="Index" 
+                   class="@GetMobileNavItemClass("Dashboard")">
+                    <svg class="@GetMobileNavIconClass("Dashboard")" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    Dashboard
+                </a>
+
+                <!-- About Management -->
+                <a asp-controller="AboutAdmin" asp-action="Index" 
+                   class="@GetMobileNavItemClass("AboutAdmin")">
+                    <svg class="@GetMobileNavIconClass("AboutAdmin")" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                    Hakkımızda
+                </a>
+
+                <!-- Team Management -->
+                <a asp-controller="TeamAdmin" asp-action="Index" 
+                   class="@GetMobileNavItemClass("TeamAdmin")">
+                    <svg class="@GetMobileNavIconClass("TeamAdmin")" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    Takım Yönetimi
+                </a>
+
+                <!-- Sponsor Management -->
+                <a asp-controller="SponsorAdmin" asp-action="Index" 
+                   class="@GetMobileNavItemClass("SponsorAdmin")">
+                    <svg class="@GetMobileNavIconClass("SponsorAdmin")" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z" />
+                    </svg>
+                    Sponsorlar
+                </a>
+
+                <!-- Services Management -->
+                <a asp-controller="ServiceAdmin" asp-action="Index" 
+                   class="@GetMobileNavItemClass("ServiceAdmin")">
+                    <svg class="@GetMobileNavIconClass("ServiceAdmin")" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Hizmetler
+                </a>
+
+   
+            </nav>
+        </div>
+
+        <!-- Mobile User Profile Section -->
+        <div class="flex-shrink-0 flex p-4 border-t border-gray-200">
+            <div class="flex items-center">
+                <div>
+                    <img class="h-9 w-9 rounded-full" src="/images/user-avatar.png" alt="User avatar">
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm font-medium text-gray-700">@User.Identity.Name</p>
+                    <a asp-controller="Account" asp-action="Profile" class="text-xs font-medium text-primary hover:text-secondary">Profilini Gör</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Mobile menu toggle
+    document.getElementById('admin-mobile-menu-button')?.addEventListener('click', function() {
+        const sidebar = document.getElementById('admin-mobile-sidebar');
+        sidebar.classList.remove('hidden');
+    });
+
+    // Mobile menu close
+    document.getElementById('mobile-sidebar-close')?.addEventListener('click', function() {
+        const sidebar = document.getElementById('admin-mobile-sidebar');
+        sidebar.classList.add('hidden');
+    });
+
+    // Close mobile sidebar when clicking outside
+    document.querySelector('#admin-mobile-sidebar > div.fixed.inset-0')?.addEventListener('click', function() {
+        const sidebar = document.getElementById('admin-mobile-sidebar');
+        sidebar.classList.add('hidden');
+    });
+</script>
+
+@functions {
+    string GetNavItemClass(string controllerName)
+    {
+        return $"group flex items-center px-2 py-2 text-sm font-medium rounded-md {(ViewContext.RouteData.Values["Controller"].ToString() == controllerName ? "bg-gray-100 text-gray-900" : "text-gray-600 hover:bg-gray-50 hover:text-gray-900")}";
+    }
+
+    string GetNavIconClass(string controllerName)
+    {
+        return $"mr-3 h-6 w-6 {(ViewContext.RouteData.Values["Controller"].ToString() == controllerName ? "text-gray-500" : "text-gray-400 group-hover:text-gray-500")}";
+    }
+
+    string GetMobileNavItemClass(string controllerName)
+    {
+        return $"group flex items-center px-2 py-2 text-base font-medium rounded-md {(ViewContext.RouteData.Values["Controller"].ToString() == controllerName ? "bg-gray-100 text-gray-900" : "text-gray-600 hover:bg-gray-50 hover:text-gray-900")}";
+    }
+
+    string GetMobileNavIconClass(string controllerName)
+    {
+        return $"mr-4 h-6 w-6 {(ViewContext.RouteData.Values["Controller"].ToString() == controllerName ? "text-gray-500" : "text-gray-400 group-hover:text-gray-500")}";
+    }
+}
