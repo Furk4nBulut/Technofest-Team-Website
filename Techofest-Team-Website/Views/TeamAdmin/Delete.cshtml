@@ -2,26 +2,58 @@
 
 @{
     ViewData["Title"] = "Takım Üyesini Sil";
+    Layout = "_AdminLayout";
 }
 
-<div class="container mt-4">
-    <h2 class="mb-4 text-danger">Takım Üyesini Sil</h2>
+<div class="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <div class="bg-white shadow rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-red-600 mb-6">@ViewData["Title"]</h2>
+        
+        <div class="bg-red-50 border-l-4 border-red-400 p-4 mb-6">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm text-red-700">
+                        Bu takım üyesini silmek istediğinize emin misiniz? Bu işlem geri alınamaz.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    <h4>Bu takım üyesini silmek istediğinize emin misiniz?</h4>
+        <div class="space-y-4 mb-6">
+            <div>
+                <h3 class="text-lg font-medium text-gray-900">Üye Bilgileri</h3>
+                <div class="mt-2 border-t border-gray-200 pt-2">
+                    <dl class="grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2">
+                        <div class="sm:col-span-1">
+                            <dt class="text-sm font-medium text-gray-500">Adı</dt>
+                            <dd class="mt-1 text-sm text-gray-900">@Model.Name</dd>
+                        </div>
+                        <div class="sm:col-span-1">
+                            <dt class="text-sm font-medium text-gray-500">Görevi</dt>
+                            <dd class="mt-1 text-sm text-gray-900">@Model.Role</dd>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <dt class="text-sm font-medium text-gray-500">Biyografi</dt>
+                            <dd class="mt-1 text-sm text-gray-900">@Model.Bio</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
 
-    <div class="mb-3">
-        <strong>İsim:</strong> @Model.Name
+        <form asp-action="Delete" method="post" class="flex justify-end space-x-3">
+            <input type="hidden" asp-for="Id" />
+            <a asp-action="Index" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                İptal
+            </a>
+            <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700">
+                Sil
+            </button>
+        </form>
     </div>
-    <div class="mb-3">
-        <strong>Rol:</strong> @Model.Role
-    </div>
-    <div class="mb-3">
-        <strong>Hakkında:</strong> @Model.Bio
-    </div>
-
-    <form asp-action="Delete" method="post">
-        <input type="hidden" asp-for="Id" />
-        <button type="submit" class="btn btn-danger">Sil</button>
-        <a asp-action="Index" class="btn btn-secondary">İptal</a>
-    </form>
 </div>

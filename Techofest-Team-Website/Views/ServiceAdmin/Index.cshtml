@@ -1,44 +1,57 @@
 @model IEnumerable<Techonefest_Team_Website.Models.Service>
 
 @{
-    ViewData["Title"] = "Servisler";
-    Layout = "_Layout"; // Layout'u belirt
+    ViewData["Title"] = "Servis Yönetimi";
+    Layout = "_AdminLayout";
 }
 
-<h1>@ViewData["Title"]</h1>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex justify-between items-center mb-8">
+        <h1 class="text-2xl font-bold text-gray-900">@ViewData["Title"]</h1>
+        <a asp-controller="ServiceAdmin" asp-action="Create" 
+           class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+            </svg>
+            Yeni Servis Ekle
+        </a>
+    </div>
 
-<p>
-    <a href="@Url.Action("Create", "ServiceAdmin")" class="btn btn-primary">Yeni Servis Ekle</a>
-</p>
-
-<table class="table">
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>Servis Adı</th>
-        <th>Açıklama</th>
-        <th>Icon</th>
-        <th>İşlemler</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var service in Model)
-    {
-        <tr>
-            <td>@service.Id</td>
-            <td>@service.Name</td>
-            <td>@service.Description</td>
-            <td>
-                @if (!string.IsNullOrEmpty(service.IconPath))
-                {
-                    <img src="@service.IconPath" alt="Icon" style="width: 50px;" />
-                }
-            </td>
-            <td>
-                <a href="@Url.Action("Edit", "ServiceAdmin", new { id = service.Id })" class="btn btn-warning btn-sm">Düzenle</a>
-                <a href="@Url.Action("Delete", "ServiceAdmin", new { id = service.Id })" class="btn btn-danger btn-sm">Sil</a>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+    <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">#</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Servis Adı</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Açıklama</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Icon</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    @foreach (var service in Model)
+                    {
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">@service.Id</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">@service.Name</td>
+                            <td class="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">@service.Description</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                @if (!string.IsNullOrEmpty(service.IconPath))
+                                {
+                                    <img src="@service.IconPath" alt="Icon" class="h-10 w-10 rounded-full object-cover" />
+                                }
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                <a asp-controller="ServiceAdmin" asp-action="Edit" asp-route-id="@service.Id" 
+                                   class="text-primary hover:text-secondary mr-4">Düzenle</a>
+                                <a asp-controller="ServiceAdmin" asp-action="Delete" asp-route-id="@service.Id" 
+                                   class="text-red-600 hover:text-red-900">Sil</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
